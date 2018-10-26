@@ -63,7 +63,7 @@ client.user.setAvatar(argresult);
 if (message.content.startsWith(adminprefix + 'sett')) {
   client.user.setGame(argresult, "https://www.twitch.tv/idk");//حقوق دايموند كودز
     message.channel.sendMessage(`**تم تغيير تويتش البوت إلى  ${argresult}**`)//حقوق دايموند كودز
-const p = {+}
+const p = {}
 client.on('message', message => {
 if(message.channel.type === "dm") return;
 if(message.author.bot) return;
