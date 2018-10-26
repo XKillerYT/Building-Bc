@@ -63,23 +63,7 @@ client.user.setAvatar(argresult);
 if (message.content.startsWith(adminprefix + 'sett')) {
   client.user.setGame(argresult, "https://www.twitch.tv/idk");//حقوق دايموند كودز
     message.channel.sendMessage(`**تم تغيير تويتش البوت إلى  ${argresult}**`)//حقوق دايموند كودز
-const p = {}
-client.on('message', message => {
-if(message.channel.type === "dm") return;
-if(message.author.bot) return;
-if(!p[message.guild.id]) p[message.guild.id] = {
-    prefix: "+"
 }
-const prefix = p[message.guild.id].prefix
-  if (message.content.startsWith(prefix + "setprefix")) {
-    if(!message.member.hasPermission(`MANAGE_GUILD`)) return;
-    let newPrefix = message.content.split(' ').slice(1).join(" ")
-    if(!newPrefix) return message.reply(`**${prefix}setprefix <prefix>**`)
-    p[message.guild.id].prefix = newPrefix
-    message.channel.send(`**${message.guild.name}'تم تغيير البرفكس ${newPrefix}**`);
-} 
-
-
 });
 
 client.login(process.env.BOT_TOKEN);
